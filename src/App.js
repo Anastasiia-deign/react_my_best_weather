@@ -14,6 +14,7 @@ export default function App() {
           </a>{" "}
           and is{" "}
           <a
+            rel="noreferrer"
             href="https://github.com/Anastasiia-deign/react_my_best_weather"
             target="_blank"
           >
