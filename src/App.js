@@ -5,12 +5,11 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="conteiner">
+      <div className="container">
         <Weather defaultCity="Krakow" />
         <footer>
           This project was coded by{" "}
           <a href="https://www.instagram.com/neveykina_nastya" target="_blank">
-            {" "}
             Anastasiia Tatarchenko
           </a>{" "}
           and is{" "}
