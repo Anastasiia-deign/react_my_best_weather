@@ -10,8 +10,18 @@ export default function Weather(props) {
 
   function handleResponse(response) {
     setWeatherData({
+      // ready: true,
+      // coordinates: response.data.coordinates,
+      // temperature: response.data.temperature.current,
+      // humidity: response.data.temperature.humidity,
+      // date: new Date(response.data.time * 1000),
+      // description: response.data.condition.description,
+      // icon: response.data.condition.icon,
+      // wind: response.data.wind.speed,
+      // city: response.data.city,
       ready: true,
       temperature: response.data.main.temp,
+      coordinates: response.data.coord,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
@@ -22,7 +32,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    let apiKey = "6643c7326a4c2a38838264a28531d97e";
+    let apiKey = "f5e814a04eddfab1740f07bf0328eee2";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -45,12 +55,12 @@ export default function Weather(props) {
               <input
                 type="search"
                 placeholder="Enter a city.."
-                className="form-control"
+                className="form-control search-input"
                 autoFocus="on"
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-3 p-0">
               <input
                 type="submit"
                 value="Search"
@@ -60,11 +70,12 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
     search();
+    //debugger;
     return "Loading...";
   }
 }
