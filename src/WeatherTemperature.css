@@ -5,3 +5,21 @@
 .WeatherTemperature .unit {
   color: #3815a1;
 }
+
+.WeatherForecast .WeatherForecast-temperatures {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #3815a1;
+  font-weight: bold;
+}
+.WeatherForecast .WeatherForecast-temperature-min {
+  margin-left: 10px;
+  opacity: 0.6;
+}
+.WeatherForecast .forecast-time {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #3815a1;
+}

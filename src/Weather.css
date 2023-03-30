@@ -10,27 +10,39 @@
     rgb(134, 200, 205) 11.5%,
     rgb(255, 253, 14) 103.1%
   );
-}
+   }
 
 .Weather h1 {
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 29px;
-  margin: 20px 0 0 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 48px;
+  margin: 20px 0 10px;
+  color: black;  
 }
 
 .Weather ul {
-  margin: 0;
-  padding: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin-bottom: 5px;
 }
 
 .Weather li {
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
   list-style: none;
+  margin-bottom: 5px;
 }
-
+.Weather li strong {
+  color: #3815a1;
+  font-weight: normal;
+  text-align: center;
+  font-weight: bolder;
+}
 .Weather canvas {
   margin-top: 10px auto;
 }
